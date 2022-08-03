@@ -1,0 +1,25 @@
+{
+    "name": "Auto PR Template",
+    "version": "1.0",
+    "author": "yuki153",
+    "manifest_version": 3,
+    "description": "Automatically applies the specified template when multiple PR templates exist.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png"
+    },
+    "action": {
+        "default_icon": {
+            "19": "icon19.png"
+        },
+        "default_title": "Auto PR_Template",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "script.js"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}

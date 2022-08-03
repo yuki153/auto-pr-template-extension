@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .auto-pr-template {
+            color: #333;
+            width: 280px;
+        }
+        .auto-pr-template * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .auto-pr-template-flex {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .auto-pr-template-title {
+            font-size: 18px;
+        }
+        .auto-pr-template-input-box {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px 0 16px;
+        }
+        .auto-pr-template-input {
+            font-size: 16px;
+            padding: 4px;
+        }
+        .auto-pr-template-input > p{
+            font-size: 14px;
+        }
+        .auto-pr-template-button {
+            font-size: 16px;
+            width: 90px;
+            padding: 4px;
+        }
+        .auto-pr-template-err {
+            padding: 8px 0 4px;
+            font-size: 16px;
+            color: red;
+        }
+        .auto-pr-template-err.is-hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="auto-pr-template">
+        <div class="auto-pr-template-flex">
+            <img src="./icon48.png" width="24" height="24">
+            <p class="auto-pr-template-title"><b>Auto PR Template</b></p>
+        </div>
+        <div class="auto-pr-template-input-box">
+            <p>GitHub user name / organization name</p>
+            <input class="auto-pr-template-input" type="textbox" id="input-username" placeholder="user name / organization name">
+            <p>GitHub repository name</p>
+            <input class="auto-pr-template-input" type="textbox" id="input-repository" placeholder="repository name">
+            <p>pull request template name</p>
+            <input class="auto-pr-template-input" type="textbox" id="input-template" placeholder="pull-request-template.md">
+        </div>
+        <div>
+            <button class="auto-pr-template-button" id="save-button">save</button>
+            <p class="auto-pr-template-err is-hide" id="err">failed: please input to all text field.<p>
+        </div>
+    </div>
+    <script src="./popup.js"></script>
+</body>
+</html>
